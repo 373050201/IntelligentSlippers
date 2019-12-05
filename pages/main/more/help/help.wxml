@@ -1,0 +1,25 @@
+<text class='title'>帮助❓</text>
+
+<text class='subTitle'>（首次使用，请先在设置页面设置体重~）</text>
+
+<text class='header'>照明页：</text>
+<text class='body'>👉您的随身jio“电筒”
+1、调色：暖（黄）、冷（白）
+2、模式切换：自动（自动适应周围亮度调节光强）、固定（固定光强）
+3、开关：开（打开灯光功能）、关（关闭）</text>
+
+<text class='header'>闹钟页：</text>
+<text class='body'>👉叫您起床随jio“小助手”
+1、输入框输入时、分，点击确定以设定闹钟
+2、踩上拖鞋才可关闭闹钟</text>
+
+<text class='header'>健康页：</text>
+<text class='body'>👉您的随jio“私人教练”
+1、体重：记录观察您的体重状况
+2、睡眠：记录观察您的睡眠情况</text>
+
+<text class='header'>设置-测试模式：</text>
+<text class='body'>开启——暂时禁用数据上传；
+关闭——开启数据上传</text>
+
+<button class='buttonReturn' plain='true' bindtap='jumpMore'><image src="/pages/images/more/return.png"></image></button>

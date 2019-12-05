@@ -1,0 +1,9 @@
+<text class='title'>更多ℹ</text>
+
+<button class='buttonSetting' plain='true' bindtap='jumpSetting'><image src="/pages/images/more/setting.png"></image></button>
+
+<button class='buttonAbout' plain='true' bindtap='jumpAbout'><image src="/pages/images/more/about.png"></image></button>
+
+<button class='buttonHelp' plain='true' bindtap='jumpHelp'><image src="/pages/images/more/help.png"></image></button>
+
+<button class='buttonReturn' plain='true' bindtap='jumpHome'><image src="/pages/images/main/home/home.png"></image></button>
