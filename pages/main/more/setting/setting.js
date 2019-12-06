@@ -87,10 +87,10 @@ Page({
   },
 
   radioOpenInterface:function(){
-    /**测试打开接口 */
+    /**测试（打开）接口 */
   },
 
   radioCloseInterface:function(){
-    /**测试关闭接口 */
+    /**测试（关闭）接口 */
   }
 })
