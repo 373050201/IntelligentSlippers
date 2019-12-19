@@ -46,7 +46,7 @@ App({
     this.globalData.onShowFlag = 0;
     this.globalData.onHideFlag = 1;
     var b=setInterval(function () {
-      if (getApp().globalData.alarmSwitch == '（已设置）' && getApp().globalData.onHideFlag == 1) {
+      if (getApp().globalData.alarmSwitch == '（已设置）') {
         if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes()) {
           console.log("DINGDINGDINGDING.....");
           getApp().submitFuncInterface();
