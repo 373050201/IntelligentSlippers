@@ -39,7 +39,11 @@ Page({
           inputHour: getApp().globalData.alarmInputHour,
           inputMinute: getApp().globalData.alarmInputMinute,
         })
-      this.submitFuncInterface();
+      wx.showToast({
+        title: '设置成功',
+        icon: 'success',
+        duration: 2000
+      })
     }
   },
 
@@ -192,34 +196,6 @@ Page({
 
 
   /*接口*/
-  submitFuncInterface:function(){
-    /*提交闹钟接口*/
-    wx.request({
-      method: 'POST',
-      url: `http://api.heclouds.com/devices/${getApp().globalData.deviceId}/datapoints?datastream_id=clockState`,
-      header: {
-        'api-key': getApp().globalData.apiKey
-      },
-      data: {
-        "datastreams": [{
-          "id": "clockState",
-          "datapoints": [{
-            "at": "",
-            "value":1
-          }]
-        }]
-      },
-      success: function (res) {
-        console.log(res),
-          wx.showToast({
-            title: '设置成功',
-            icon: 'success',
-            duration: 2000
-          })
-      },
-    })
-  },
-
   deleteAlarmInterface:function(){
     /*取消闹钟接口*/
   }

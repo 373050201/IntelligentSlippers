@@ -1,5 +1,26 @@
 //app.js
 App({
+  onShow:function(){
+    setInterval(function(){
+      if (getApp().globalData.alarmSwitch =='（已设置）')
+      {
+        if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes())         
+        {
+          console.log("DINGDINGDINGDING.....");
+          //this.submitFuncInterface();
+          getApp().globalData.alarmSwitch='（未设置）';
+          getApp().globalData.alarmInputHour= '这里输入时';
+          getApp().globalData.alarmInputMinute = '这里输入分';
+        }
+      }
+      console.log(new Date().getSeconds());
+    },1000)
+  },
+
+  onHide:function(){
+
+  },
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -41,6 +62,7 @@ App({
     deviceId:"577236712",
     ///SKL:"575270839"
     //me:"577236712"
+
     lightSwitchRecord:0,
     lightColorRecord: 0,
     lightAdjustRecord: 0,
@@ -59,5 +81,28 @@ App({
     cYear: new Date().getFullYear(),
     cMonth: new Date().getMonth() + 1,
     cDate: new Date().getDate()
+  },
+
+  submitFuncInterface: function () {
+    /*提交闹钟接口*/
+    wx.request({
+      method: 'POST',
+      url: `http://api.heclouds.com/devices/${getApp().globalData.deviceId}/datapoints?datastream_id=_clockState`,
+      header: {
+        'api-key': getApp().globalData.apiKey
+      },
+      data: {
+        "datastreams": [{
+          "id": "_clockState",
+          "datapoints": [{
+            "at": "",
+            "value": 1
+          }]
+        }]
+      },
+      success: function (res) {
+        console.log(res)
+      },
+    })
   }
 })
