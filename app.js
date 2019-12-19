@@ -1,8 +1,10 @@
 //app.js
 App({
   onShow:function(){
+    this.globalData.onShowFlag = 1;
+    this.globalData.onHideFlag = 0;
     setInterval(function(){
-      if (getApp().globalData.alarmSwitch =='（已设置）')
+      if (getApp().globalData.alarmSwitch == '（已设置）' && getApp().globalData.onShowFlag==1)
       {
         if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes())         
         {
@@ -32,13 +34,15 @@ App({
           getApp().globalData.alarmInputMinute = '这里输入分';
         }
       }
-      console.log(new Date().getSeconds());
+      console.log(new Date().getHours(), "_", new Date().getMinutes(), "_", new Date().getSeconds());
     },1000)
   },
 
   onHide:function(){
+    this.globalData.onShowFlag = 0;
+    this.globalData.onHideFlag = 1;
     setInterval(function () {
-      if (getApp().globalData.alarmSwitch == '（已设置）') {
+      if (getApp().globalData.alarmSwitch == '（已设置）' && getApp().globalData.onHideFlag == 1) {
         if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes()) {
           console.log("DINGDINGDINGDING.....");
           getApp().submitFuncInterface();
@@ -111,6 +115,9 @@ App({
     deviceId:"577236712",
     ///SKL:"575270839"
     //me:"577236712"
+
+    onShowFlag:0,
+    onHideFlag:0,
 
     lightSwitchRecord:0,
     lightColorRecord: 0,
