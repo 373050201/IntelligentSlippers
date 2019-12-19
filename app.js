@@ -3,8 +3,8 @@ App({
   onShow:function(){
     this.globalData.onShowFlag = 1;
     this.globalData.onHideFlag = 0;
-    setInterval(function(){
-      if (getApp().globalData.alarmSwitch == '（已设置）' && getApp().globalData.onShowFlag==1)
+    var b=setInterval(function(){
+      if (getApp().globalData.alarmSwitch == '（已设置）')
       {
         if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes())         
         {
@@ -34,6 +34,10 @@ App({
           getApp().globalData.alarmInputMinute = '这里输入分';
         }
       }
+      if (getApp().globalData.onShowFlag == 0)
+      {
+        clearInterval(b)
+      }
       console.log(new Date().getHours(), "_", new Date().getMinutes(), "_", new Date().getSeconds());
     },1000)
   },
@@ -41,7 +45,7 @@ App({
   onHide:function(){
     this.globalData.onShowFlag = 0;
     this.globalData.onHideFlag = 1;
-    setInterval(function () {
+    var b=setInterval(function () {
       if (getApp().globalData.alarmSwitch == '（已设置）' && getApp().globalData.onHideFlag == 1) {
         if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes()) {
           console.log("DINGDINGDINGDING.....");
@@ -69,6 +73,9 @@ App({
           getApp().globalData.alarmInputHour = '这里输入时';
           getApp().globalData.alarmInputMinute = '这里输入分';
         }
+      }
+      if (getApp().globalData.onHideFlag == 0) {
+        clearInterval(b)
       }
       console.log(new Date().getSeconds());
     }, 1000)
