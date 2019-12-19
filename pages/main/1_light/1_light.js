@@ -31,7 +31,7 @@ Page({
     else
     {
       getApp().globalData.lightSwitch='开';
-      this.changeSwitchOpebInterface();
+      this.changeSwitchOpenInterface();
     }
     this.setData
     ({
