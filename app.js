@@ -18,7 +18,18 @@ App({
   },
 
   onHide:function(){
-
+    setInterval(function () {
+      if (getApp().globalData.alarmSwitch == '（已设置）') {
+        if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes()) {
+          console.log("DINGDINGDINGDING.....");
+          //this.submitFuncInterface();
+          getApp().globalData.alarmSwitch = '（未设置）';
+          getApp().globalData.alarmInputHour = '这里输入时';
+          getApp().globalData.alarmInputMinute = '这里输入分';
+        }
+      }
+      console.log(new Date().getSeconds());
+    }, 1000)
   },
 
   onLaunch: function () {
