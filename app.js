@@ -7,7 +7,26 @@ App({
         if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes())         
         {
           console.log("DINGDINGDINGDING.....");
-          //this.submitFuncInterface();
+          getApp().submitFuncInterface();
+          var a = setInterval(function(){
+            wx.request({
+              method: 'POST',
+              url: `http://api.heclouds.com/devices/${getApp().globalData.deviceId}/datapoints?datastream_id=clockState_`,
+              header: {
+                'api-key': getApp().globalData.apiKey
+              },
+              data: {
+                "datastreams": [{
+                  "id": "clockState_",
+                  "datapoints": [{
+                    "at": "",
+                    "value": 0
+                  }]
+                }]
+              },
+            })
+            clearInterval(a)
+          },5000)
           getApp().globalData.alarmSwitch='（未设置）';
           getApp().globalData.alarmInputHour= '这里输入时';
           getApp().globalData.alarmInputMinute = '这里输入分';
@@ -22,7 +41,7 @@ App({
       if (getApp().globalData.alarmSwitch == '（已设置）') {
         if (parseInt(getApp().globalData.alarmInputHour) == new Date().getHours() && parseInt(getApp().globalData.alarmInputMinute) == new Date().getMinutes()) {
           console.log("DINGDINGDINGDING.....");
-          //this.submitFuncInterface();
+          this.submitFuncInterface();
           getApp().globalData.alarmSwitch = '（未设置）';
           getApp().globalData.alarmInputHour = '这里输入时';
           getApp().globalData.alarmInputMinute = '这里输入分';
@@ -98,13 +117,13 @@ App({
     /*提交闹钟接口*/
     wx.request({
       method: 'POST',
-      url: `http://api.heclouds.com/devices/${getApp().globalData.deviceId}/datapoints?datastream_id=_clockState`,
+      url: `http://api.heclouds.com/devices/${getApp().globalData.deviceId}/datapoints?datastream_id=clockState_`,
       header: {
         'api-key': getApp().globalData.apiKey
       },
       data: {
         "datastreams": [{
-          "id": "_clockState",
+          "id": "clockState_",
           "datapoints": [{
             "at": "",
             "value": 1
