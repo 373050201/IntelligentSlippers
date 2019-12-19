@@ -35,12 +35,12 @@ App({
   },
   globalData: {
     userInfo: null,
-    apiKey:"zFKy4H9t=YbrcbFxo73K1o7MsIM=",
+    apiKey:"5gZ=toJUnIQe2lgPZLt6bw0pIJw=",
     //SKL:"zFKy4H9t=YbrcbFxo73K1o7MsIM="
-    //me:
-    deviceId:"575270839",
+    //me:"5gZ=toJUnIQe2lgPZLt6bw0pIJw="
+    deviceId:"577236712",
     ///SKL:"575270839"
-    //me:
+    //me:"577236712"
     lightSwitchRecord:0,
     lightColorRecord: 0,
     lightAdjustRecord: 0,
