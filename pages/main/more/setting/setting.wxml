@@ -1,0 +1,18 @@
+<text class='title'>设置⚙️</text>
+
+<text class='header'>体重设置：</text>
+<text class='setState'>{{switch}}</text>
+<form bindsubmit='submitFunc'>
+  <input class='inputPlace' name="input_weight" placeholder="{{weight}}" />
+  <button plain='true' class='buttonSubmit' formType="submit">确定</button>
+</form>
+
+<text class='headerTest'>测试模式：</text>
+<radio-group class='radioGroup' bindchange="radioChange">
+<radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+<text>{{item.value}}</text>
+</radio></radio-group>
+
+<button class='buttonDelete' plain='true' bindtap='deleteWeight'><image src="/pages/images/main/2_alarm/delete.png"></image></button>
+
+<button class='buttonReturn' plain='true' bindtap='jumpMore'><image src="/pages/images/more/return.png"></image></button>

@@ -1,0 +1,11 @@
+<text class='title'>照明💡</text>
+
+<text class='mode'>\n状态：<text class='state'>{{switch}}</text>颜色：<text class='state'>{{color}} </text>模式：<text class='state'>{{mode}} </text></text>
+
+<button class='buttonColor' plain='true' bindtap='changeColor'><image src="/pages/images/main/1_light/color.png"></image></button>
+
+<button class='buttonAdjust' plain='true' bindtap='changeAdjust'><image src="/pages/images/main/1_light/adjust.png"></image></button>
+
+<button class='buttonSwitch' plain='true' bindtap='changeSwitch'><image src="/pages/images/main/1_light/switch.png"></image></button>
+
+<button class='buttonReturn' plain='true' bindtap='jumpHome'><image src="/pages/images/main/home/home.png"></image></button>

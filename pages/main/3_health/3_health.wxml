@@ -1,0 +1,7 @@
+<text class='title'>健康💓</text>
+
+<button class='buttonWeight' plain='true' bindtap='jumpWeight'><image src="/pages/images/main/3_health/weight.png"></image></button>
+
+<button class='buttonSleep' plain='true' bindtap='jumpSleep'><image src="/pages/images/main/3_health/sleep.png"></image></button>
+
+<button class='buttonReturn' plain='true' bindtap='jumpHome'><image src="/pages/images/main/home/home.png"></image></button>
