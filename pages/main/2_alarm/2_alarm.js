@@ -39,8 +39,8 @@ Page({
           inputHour: getApp().globalData.alarmInputHour,
           inputMinute: getApp().globalData.alarmInputMinute,
         })
+      this.submitFuncInterface();
     }
-    this.submitFuncInterface();
   },
 
   deleteAlarm:function(){
@@ -205,7 +205,7 @@ Page({
           "id": "clockState",
           "datapoints": [{
             "at": "",
-            "value": '1',
+            "value":1
           }]
         }]
       },

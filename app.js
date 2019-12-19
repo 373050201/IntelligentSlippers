@@ -35,8 +35,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    apiKey:"zFKy4H9t=YbrcbFxo73K1o7MslM=",
-    //SKL:"zFKy4H9t=YbrcbFxo73K1o7MslM="
+    apiKey:"zFKy4H9t=YbrcbFxo73K1o7MsIM=",
+    //SKL:"zFKy4H9t=YbrcbFxo73K1o7MsIM="
     //me:
     deviceId:"575270839",
     ///SKL:"575270839"
