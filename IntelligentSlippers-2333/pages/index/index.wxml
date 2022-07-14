@@ -1,0 +1,3 @@
+<view class='welcomeText'>欢迎使用智能拖鞋~</view>
+<button class='welcomeButton' bindtap='jumpMain' style="width:600rpx;height:100rpx">→点我开始使用←</button>
+<button class='aboutButton' bindtap='jumpAbout'>关于开发者</button>

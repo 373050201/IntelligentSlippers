@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/3_health/sleep/sleep",
+    "pages/main/3_health/weight/weight",
+    "pages/main/2_alarm/2_alarm",
+    "pages/main/more/setting/setting",
+    "pages/main/1_light/1_light",
+    "pages/main/3_health/3_health",
+    "pages/about/about",
+    "pages/main/more/help/help",
+    "pages/main/more/more",
+    "pages/main/home/home",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智能拖鞋APP",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

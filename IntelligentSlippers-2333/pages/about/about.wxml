@@ -1,0 +1,18 @@
+<text class='title'>智能拖鞋项目——关于\n</text>
+
+<text class='header'>制作团队：</text>
+<text class='body'>2019级-解方程组\n</text>
+
+<text class='header'>组员：</text>
+<text class='body'>魏文冶\n</text>
+<text class='body'>沙尔江\n</text>
+<text class='body'>孙凯琳\n</text>
+<text class='body'>乔毅\n</text>
+<text class='body'>王毅伟\n</text>
+
+<text class='header'>后台QQ联系方式：</text>
+<text class='body'>373050201\n</text>
+
+<text class='bottomText'>——2019-导论期末作品</text>
+
+<button class='buttonReturn' plain='true' bindtap='jumpHome'><image src="/pages/images/main/home/home.png"></image></button>

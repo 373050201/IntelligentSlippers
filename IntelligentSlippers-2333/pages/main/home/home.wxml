@@ -1,0 +1,7 @@
+<button class='buttonHealth' plain='true' bindtap='jumpHealth'><image src="/pages/images/main/home/health.png"></image></button>
+
+<button class='buttonAlarm' plain='true' bindtap='jumpAlarm'><image src="/pages/images/main/home/alarm.png"></image></button>
+
+<button class='buttonMore' plain='true' bindtap='jumpMore'><image src="/pages/images/main/home/more.png"></image></button>
+
+<button class='buttonLight' plain='true' bindtap='jumpLight'><image src="/pages/images/main/home/light.png"></image></button>

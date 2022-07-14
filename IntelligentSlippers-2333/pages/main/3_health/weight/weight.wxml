@@ -1,0 +1,20 @@
+<text class='title'>体重🍎</text>
+
+ <view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1">日期</view>
+          <view class="th th2">预设体重</view>
+          <view class="th th3">实际体重</view>
+          <view class="th th4">参考差值</view>
+      </view>
+      <view class="tr" wx:for="{{arrayList}}">
+          <view class="td td1">{{item.date}}</view>
+          <view class="td td2">{{settingWeight}}{{settingWeightTail}}</view>
+          <view class="td td3">{{item.trueWeight}}kg</view>
+          <view class="td td4"><view class='{{item.colorState}}'>{{item.difHead}}{{item.dif}}{{difTail}}</view></view>
+      </view>
+    </view>
+ </view>
+
+ <button class='buttonReturn' plain='true' bindtap='jumpHealth'><image src="/pages/images/more/return.png"></image></button>

@@ -1,0 +1,18 @@
+<text class='title'>闹钟⏰</text>
+
+<text class='setState'>{{switch}}</text>
+
+<text class='header'>\n当前时间：</text>
+<view class='container'><canvas canvas-id='clock'/></view>
+
+<text class='header'><text class='header2'>\n设定时间：</text></text>
+<form bindsubmit='submitFunc'>
+  <input class='inputPlace1' name="input_hour" placeholder="{{inputHour}}" />
+  <text class='colon'>：</text>
+  <input class='inputPlace2' name="input_minute" placeholder="{{inputMinute}}" />
+  <button plain='true' class='buttonSubmit' formType="submit">确定</button>
+</form>
+
+<button class='buttonReturn' plain='true' bindtap='jumpHome'><image src="/pages/images/main/home/home.png"></image></button>
+
+<button class='buttonDelete' plain='true' bindtap='deleteAlarm'><image src="/pages/images/main/2_alarm/delete.png"></image></button>
